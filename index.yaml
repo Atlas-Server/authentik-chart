@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  authentik:
+  - apiVersion: v2
+    appVersion: 2024.12.1
+    created: "2025-01-25T18:15:51.552575226Z"
+    dependencies:
+    - name: authentik
+      repository: https://charts.goauthentik.io/
+      version: 2024.12.1
+    description: A Helm chart for deploying Authentik with customizations
+    digest: 22573fcc3915ba03cd43b3cc8f1b4fcfcc9ab9fd284780d6446f3ad096e33fb2
+    name: authentik
+    type: application
+    urls:
+    - https://github.com/Atlas-Server/authentik-chart/releases/download/authentik-0.0.01/authentik-0.0.01.tgz
+    version: 0.0.01
+generated: "2025-01-25T18:15:51.552584623Z"
