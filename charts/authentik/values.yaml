@@ -1,0 +1,32 @@
+authentik:
+  server:
+    volumeMounts:
+      - name: authentik-media
+        mountPath: /media/
+    volumes:
+      - name: authentik-media
+        configMap:
+          name: authentik-media
+  worker:
+    volumeMounts:
+      - name: authentik-blueprints
+        mountPath: /blueprints/custom/
+    volumes:
+      - name: authentik-blueprints
+        configMap:
+          name: authentik-blueprints
+      
+blueprints:
+  - name: test1
+    content: |-
+      hello
+      world
+  - name: test2
+    content: |-
+      hello
+      world
+      again
+
+media:
+  - name: test1
+    content: thisisrandombase64content

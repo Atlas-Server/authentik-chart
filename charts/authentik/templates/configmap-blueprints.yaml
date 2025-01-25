@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: authentik-blueprints
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: authentik-blueprints
+    app.kubernetes.io/component: worker
+    app.kubernetes.io/part-of: authentik
+spec:
+  data:
+{{- range $blueprint := $.Values.blueprints }}
+    {{ $blueprint.name }}: |-
+      {{- $blueprint.content | nindent 6 }}
+{{- end }}
