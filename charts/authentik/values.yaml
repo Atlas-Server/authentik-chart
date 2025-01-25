@@ -1,12 +1,4 @@
 authentik:
-  server:
-    volumeMounts:
-      - name: authentik-media
-        mountPath: /media/
-    volumes:
-      - name: authentik-media
-        configMap:
-          name: authentik-media
   worker:
     volumeMounts:
       - name: authentik-blueprints
@@ -26,7 +18,3 @@ blueprints:
       hello
       world
       again
-
-media:
-  - name: test1
-    content: thisisrandombase64content
