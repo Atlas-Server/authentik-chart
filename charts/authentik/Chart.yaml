@@ -2,7 +2,7 @@ apiVersion: v2
 name: authentik
 description: A Helm chart for deploying Authentik with customizations
 type: application
-version: 0.0.02
+version: 0.0.03
 appVersion: 2024.12.1
 dependencies:
   - name: authentik
